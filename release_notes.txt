@@ -1,0 +1,24 @@
+Enlace de instalación (Firebase App Distribution): https://appdistribution.firebase.google.com/testerapps/1:90630479700:android:4047660b5406d6147232c1/releases/6hl720be8err0?utm_source=firebase-tools
+
+Enlace del release en consola: https://console.firebase.google.com/project/taller5appdist/appdistribution/app/android:com.taller.taller_datos_abiertos/releases/6hl720be8err0?utm_source=firebase-tools
+
+Release Notes - v1.0.0+1 (inicial)
+Fecha: 2026-11-01
+Cambios:
+- Primera distribución del APK de la app "Datos Abiertos de Colombia".
+- Consumo de API Colombia (departamentos, presidentes, atractivos, platos, aeropuertos).
+Responsable: Nicolás Lozano Salazar
+Incidencias: Ninguna.
+Estado de pruebas: Pendiente de instalación en dispositivo físico.
+
+Enlace de instalación (release v1.0.1+2): https://appdistribution.firebase.google.com/testerapps/1:90630479700:android:4047660b5406d6147232c1/releases/50h21rsj2nqho?utm_source=firebase-tools
+Enlace en consola (v1.0.1+2): https://console.firebase.google.com/project/taller5appdist/appdistribution/app/android:com.taller.taller_datos_abiertos/releases/50h21rsj2nqho?utm_source=firebase-tools
+
+Release Notes - v1.0.1+2 (actualización)
+Fecha: 2026-11-01
+Cambios:
+- Incremento de versión (1.0.0 -> 1.0.1) para validar flujo de actualización.
+- Verificación de permiso INTERNET en AndroidManifest.xml.
+Responsable: Nicolás Lozano Salazar
+Incidencias: Ninguna.
+Estado de pruebas: Pendiente de instalación/actualización en dispositivo físico.
