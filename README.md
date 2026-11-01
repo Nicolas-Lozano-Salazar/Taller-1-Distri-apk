@@ -95,3 +95,26 @@ Configurar `.env` con:
 ```
 API_BASE_URL=https://api-colombia.com/api/v1
 ```
+
+## Publicación (Firebase App Distribution)
+
+Flujo resumido: **Generar APK → App Distribution → Testers → Instalación → Actualización**.
+
+### Pasos para replicar el proceso en el equipo
+
+1. Generar build de release:
+   ```bash
+   flutter build apk --release
+   ```
+   El APK se genera en `build/app/outputs/flutter-apk/app-release.apk`.
+2. Verificar permisos mínimos en `android/app/src/main/AndroidManifest.xml` (incluye `INTERNET`).
+3. Crear/abrir el proyecto en Firebase Console y registrar la app Android con el `applicationId` (`com.taller.taller_datos_abiertos`).
+4. En App Distribution → Testers & Groups, crear el grupo `QA_Clase` y agregar el tester `dduran@uceva.edu.co`.
+5. En Releases, subir `app-release.apk`, asignar al grupo `QA_Clase`, incluir Release Notes y distribuir; copiar el enlace de instalación.
+6. Instalar en un dispositivo Android físico y ejecutar la app.
+7. Para la actualización incremental, cambiar la versión en `pubspec.yaml` (ej.: `1.0.0+1` → `1.0.1+2`), regenerar el APK y volver a distribuir.
+
+### Versionado
+
+- `version: 1.0.1+2` (versionName 1.0.1, versionCode 2).
+- Formato de Release Notes sugerido: fecha, cambios, responsable, incidencias y estado de pruebas.
